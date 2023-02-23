@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.vinilemess.corporatehotels.service.HotelServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-02-22T03:40:40" hostname="VINICIUS" time="0.123">
+  <properties/>
+  <testcase name="should validate creation of existing hotel()" classname="com.vinilemess.corporatehotels.service.HotelServiceTest" time="0.101"/>
+  <testcase name="test findHotelById with invalid hotelId()" classname="com.vinilemess.corporatehotels.service.HotelServiceTest" time="0.003"/>
+  <testcase name="test setRoom with non-existing hotel()" classname="com.vinilemess.corporatehotels.service.HotelServiceTest" time="0.005"/>
+  <testcase name="should create hotel successfully()" classname="com.vinilemess.corporatehotels.service.HotelServiceTest" time="0.005"/>
+  <testcase name="test setRoom with existing hotel()" classname="com.vinilemess.corporatehotels.service.HotelServiceTest" time="0.003"/>
+  <testcase name="test findHotelById with valid hotelId()" classname="com.vinilemess.corporatehotels.service.HotelServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

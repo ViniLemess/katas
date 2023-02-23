@@ -1,0 +1,33 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.7.21'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'application'
+}
+
+group = 'com.vinilemess'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    testImplementation 'org.mockito.kotlin:mockito-kotlin:4.1.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = '17'
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = '17'
+}
+
+application {
+    mainClassName = 'com.vinilemess.corporatehotels.MainKt'
+}
