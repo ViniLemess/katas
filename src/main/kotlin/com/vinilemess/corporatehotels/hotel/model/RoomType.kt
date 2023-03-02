@@ -1,11 +1,9 @@
-package com.vinilemess.corporatehotels.model
+package com.vinilemess.corporatehotels.hotel.model
 
 enum class RoomType {
     SINGLE,
-    TWIN,
+    DOUBLE,
     STUDIO,
-    DELUXE,
     SUITE,
-    VIEW,
     PRESIDENTIAL
 }
