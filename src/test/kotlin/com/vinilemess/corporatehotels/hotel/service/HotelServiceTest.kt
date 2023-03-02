@@ -1,4 +1,4 @@
-package com.vinilemess.corporatehotels.service
+package com.vinilemess.corporatehotels.hotel.service
 
 import com.vinilemess.corporatehotels.exception.ExistentHotelException
 import com.vinilemess.corporatehotels.exception.NotFoundException
