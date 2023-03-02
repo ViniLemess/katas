@@ -19,10 +19,8 @@ class EmployeeRepository {
         return employee;
     }
 
-    fun findEmployeeBy(employeeId: Long): Employee {
-        return employeeMap.getOrElse(employeeId) {
-            throw NotFoundException("Employee with id $employeeId not found.")
-        }
+    fun findEmployeeBy(employeeId: Long): Employee? {
+        return employeeMap[employeeId]
     }
 
     fun removeEmployee(id: Long) {
