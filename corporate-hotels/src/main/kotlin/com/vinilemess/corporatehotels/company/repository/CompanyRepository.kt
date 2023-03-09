@@ -12,6 +12,6 @@ class CompanyRepository {
     }
 
     fun findCompanyBy(id: Long): Company? {
-        return companyMap[id]
+        return companyMap.get(id)
     }
 }
