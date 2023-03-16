@@ -23,6 +23,8 @@ class StatementPrinter(private val printer: Printer) {
     private fun getStatementLines(transactions: List<Transaction>): List<String> {
         val runningBalance: AtomicReference<BigDecimal> = AtomicReference(BigDecimal.ZERO)
         return transactions.map { transaction -> buildStatementLine(runningBalance, transaction) }
+
+        transactions
     }
 
     private fun buildStatementLine(runningBalance: AtomicReference<BigDecimal>, transaction: Transaction): String {
