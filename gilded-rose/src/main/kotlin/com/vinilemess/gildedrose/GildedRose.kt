@@ -39,7 +39,7 @@ class GildedRose(var items: List<Item>) {
                 else -> item.decreaseQuality(qualityChange)
             }
         }
-        return Item(item.name, item.sellIn, item.quality)
+        return item
     }
 
     private fun updateBackstagePass(item: Item) {
