@@ -55,7 +55,7 @@ class GildedRose(var items: List<Item>) {
         quality = (quality + amount).coerceAtMost(50)
     }
 
-    private fun Item.decreaseQuality(amount: Int = 1) {
+    private fun Item.decreaseQuality(amount: Int) {
         quality = (quality - amount).coerceAtLeast(0)
     }
 }

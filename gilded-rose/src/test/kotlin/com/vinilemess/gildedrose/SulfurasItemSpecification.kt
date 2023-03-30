@@ -15,4 +15,14 @@ class SulfurasItemSpecification {
         assertEquals(80, items[0].quality)
         assertEquals(30, items[0].sellIn)
     }
+
+    @Test
+    fun sellInShouldNotDecrease_WhenUpdateQuality() {
+        val items = listOf(Item(SULFURAS, 0, 80))
+        val guildedRose = GildedRose(items)
+
+        guildedRose.updateQuality();
+
+        assertEquals(0, items[0].sellIn)
+    }
 }
