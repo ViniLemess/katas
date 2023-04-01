@@ -6,7 +6,7 @@ import kotlin.test.assertEquals
 class ConjuredItemSpecification {
 
     @Test
-    fun whenUpdateQualityOfItemWithNameStartingWithConjured_qualityShouldDecreaseBy2() {
+    fun `when update quality Of item with name starting with conjured quality should decrease by 2`() {
         val items = listOf(Item("$CONJURED_PREFIX Mana Cake", 30, 50))
         val guildedRose = GildedRose(items)
 
@@ -17,7 +17,7 @@ class ConjuredItemSpecification {
     }
 
     @Test
-    fun whenUpdateQualityOfItemWithNameStartingWithConjured_AndSellInEqualsTo0_qualityShouldDecreaseBy4() {
+    fun `when update quality of item with conjured as starting name and sellIn equals to 0 quality should decrease by 4`() {
         val items = listOf(Item("$CONJURED_PREFIX Mana Cake", 0, 50))
         val guildedRose = GildedRose(items)
 

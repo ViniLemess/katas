@@ -6,7 +6,7 @@ import kotlin.test.assertEquals
 class SulfurasItemSpecification {
 
     @Test
-    fun qualityShouldNotChange_WhenUpdateQuality() {
+    fun `quality should not change when update quality`() {
         val items = listOf(Item(SULFURAS, 30, 80))
         val guildedRose = GildedRose(items)
 
@@ -17,7 +17,7 @@ class SulfurasItemSpecification {
     }
 
     @Test
-    fun sellInShouldNotDecrease_WhenUpdateQuality() {
+    fun `sellIn should not decrease when update quality`() {
         val items = listOf(Item(SULFURAS, 0, 80))
         val guildedRose = GildedRose(items)
 

@@ -4,11 +4,13 @@ import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 
+private const val ARTHUR_SWORD = "Arthur Sword"
+
 class NormalItemSpecification {
 
     @Test
-    fun qualityShouldDecreaaseBy1_WhenUpdateQuality() {
-        val items = listOf(Item("Arthur Sword", 30, 50))
+    fun `quality should decreaase by 1 when update quality`() {
+        val items = listOf(Item(ARTHUR_SWORD, 30, 50))
         val guildedRose = GildedRose(items)
 
         guildedRose.updateQuality()
@@ -18,8 +20,8 @@ class NormalItemSpecification {
     }
 
     @Test
-    fun whenUpdateQualityWithSellInEqualTo0_qualityShouldDecreaseBy2() {
-        val items = listOf(Item("Arthur Sword", 0, 50))
+    fun `when update quality with sellIn equal to 0 quality should decrease by 2`() {
+        val items = listOf(Item(ARTHUR_SWORD, 0, 50))
         val guildedRose = GildedRose(items)
 
         guildedRose.updateQuality()
@@ -29,8 +31,8 @@ class NormalItemSpecification {
     }
 
     @Test
-    fun qualityShouldNotBeLessThan0_whenUpdateQuality() {
-        val items = listOf(Item("Arthur Sword", 30, 0))
+    fun `quality should not be less than 0 when update quality`() {
+        val items = listOf(Item(ARTHUR_SWORD, 30, 0))
         val guildedRose = GildedRose(items)
 
         guildedRose.updateQuality()

@@ -7,7 +7,7 @@ import kotlin.test.assertTrue
 class AgedBrieItemSpecification {
 
     @Test
-    fun qualityShouldIncreaseBy1_WhenUpdateQuality() {
+    fun `quality should increase by 1 when update quality`() {
         val items = listOf(Item(AGED_BRIE, 30, 30))
         val guildedRose = GildedRose(items)
 
@@ -18,7 +18,7 @@ class AgedBrieItemSpecification {
     }
 
     @Test
-    fun whenUpdateItemWithSellInEqualTo0_qualityShouldIncreaseBy2() {
+    fun `when update item with sellIn equal to 0 quality should increase by 2`() {
         val items = listOf(Item(AGED_BRIE, 0, 30))
         val guildedRose = GildedRose(items)
 
@@ -29,7 +29,7 @@ class AgedBrieItemSpecification {
     }
 
     @Test
-    fun qualityShouldNotBeGreaterThan50_whenUpdateQuality() {
+    fun `quality should not be greater than 50 when update quality`() {
         val items = listOf(Item(AGED_BRIE, 30, 50))
         val guildedRose = GildedRose(items)
 

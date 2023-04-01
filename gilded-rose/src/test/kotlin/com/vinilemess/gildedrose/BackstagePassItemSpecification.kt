@@ -7,7 +7,7 @@ import kotlin.test.assertTrue
 class BackstagePassItemSpecification {
 
     @Test
-    fun qualityShouldIncreaseBy1_WhenUpdateQuality() {
+    fun `quality should increase by 1 when update quality`() {
         val items = listOf(Item(BACKSTAGE_PASS, 30, 30))
         val guildedRose = GildedRose(items)
 
@@ -18,7 +18,7 @@ class BackstagePassItemSpecification {
     }
 
     @Test
-    fun whenUpdateItemWithSellInLessThanOrEqualTo0_qualityShouldBe0() {
+    fun `when update item with sellIn less than or equal to 0 quality should be 0`() {
         val items = listOf(Item(BACKSTAGE_PASS, 0, 0))
         val guildedRose = GildedRose(items)
 
@@ -29,7 +29,7 @@ class BackstagePassItemSpecification {
     }
 
     @Test
-    fun whenUpdateItemWithSellInLessThanOrEqualTo10_qualityShouldIncreaseBy2() {
+    fun `when update item with sellIn less than or equal to 10 quality should increase by 2`() {
         val items = listOf(Item(BACKSTAGE_PASS, 10, 30))
         val guildedRose = GildedRose(items)
 
@@ -40,7 +40,7 @@ class BackstagePassItemSpecification {
     }
 
     @Test
-    fun whenUpdateItemWithSellInLessThanOrEqualTo5_qualityShouldIncreaseBy3() {
+    fun `when update item with sellIn less than or equal to 5 quality should increase by 3`() {
         val items = listOf(Item(BACKSTAGE_PASS, 5, 30))
         val guildedRose = GildedRose(items)
 
@@ -51,7 +51,7 @@ class BackstagePassItemSpecification {
     }
 
     @Test
-    fun qualityShouldNotBeGreaterThan50_whenUpdateQuality() {
+    fun `quality should not be greater than 50 when update quality`() {
         val items = listOf(Item(BACKSTAGE_PASS, 30, 50))
         val guildedRose = GildedRose(items)
 
