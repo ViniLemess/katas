@@ -1,9 +1,6 @@
 package com.vinilemess.gildedrose
 
-import com.vinilemess.gildedrose.strategies.AgedBrieStrategy
-import com.vinilemess.gildedrose.strategies.BackstagePassStrategy
-import com.vinilemess.gildedrose.strategies.DefaultUpdateStrategy
-import com.vinilemess.gildedrose.strategies.SulfurasStrategy
+import com.vinilemess.gildedrose.strategies.*
 
 class GildedRose(private val items: List<Item>) {
 
@@ -11,7 +8,7 @@ class GildedRose(private val items: List<Item>) {
         AGED_BRIE to AgedBrieStrategy(),
         BACKSTAGE_PASS to BackstagePassStrategy(),
         SULFURAS to SulfurasStrategy(),
-    ).withDefault { DefaultUpdateStrategy() }
+    ).withDefault { ConjuredUpdateStrategy(DefaultUpdateStrategy()) }
 
     fun updateQuality() {
         items.map { item ->
