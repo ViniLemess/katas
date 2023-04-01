@@ -29,17 +29,6 @@ class NormalItemSpecification {
     }
 
     @Test
-    fun whenUpdateQualityOfItemWithNameStartingWithConjured_qualityShouldDecreaseBy2() {
-        val items = listOf(Item("Conjured Arthur Sword", 30, 50))
-        val guildedRose = GildedRose(items)
-
-        guildedRose.updateQuality()
-
-        assertEquals(48, items[0].quality)
-        assertEquals(29, items[0].sellIn)
-    }
-
-    @Test
     fun qualityShouldNotBeLessThan0_whenUpdateQuality() {
         val items = listOf(Item("Arthur Sword", 30, 0))
         val guildedRose = GildedRose(items)
