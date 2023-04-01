@@ -2,9 +2,11 @@ package com.vinilemess.gildedrose.strategies
 
 import com.vinilemess.gildedrose.Item
 
-class AgedBrieStrategy: UpdateItemStrategy {
+class AgedBrieStrategy : UpdateItemStrategy {
     override fun updateItem(item: Item): Item {
-        item.increaseQuality()
+        if (item.sellIn == 0) item.increaseQuality(2)
+        else item.increaseQuality()
+
         item.decreaseSellIn()
         return item
     }

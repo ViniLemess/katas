@@ -9,7 +9,7 @@ import com.vinilemess.gildedrose.Item
         quality = (quality + amount).coerceAtMost(50)
     }
 
-    fun Item.decreaseQuality(amount: Int) {
+    fun Item.decreaseQuality(amount: Int = 1) {
         quality = (quality - amount).coerceAtLeast(0)
     }
 

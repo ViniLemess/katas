@@ -2,10 +2,12 @@ package com.vinilemess.gildedrose.strategies
 
 import com.vinilemess.gildedrose.Item
 
-class DefaultUpdateStrategy: UpdateItemStrategy {
+class DefaultUpdateStrategy : UpdateItemStrategy {
 
     override fun updateItem(item: Item): Item {
-        item.decreaseQuality(1)
+        if (item.sellIn == 0) item.decreaseQuality(2)
+        else item.decreaseQuality()
+
         item.decreaseSellIn()
         return item
     }
