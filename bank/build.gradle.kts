@@ -14,7 +14,7 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     testImplementation("io.mockk:mockk:1.13.4")
-
+    implementation(kotlin("stdlib-jdk8"))
 }
 
 tasks.test {
@@ -23,4 +23,8 @@ tasks.test {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+kotlin {
+    jvmToolchain(11)
 }
