@@ -7,6 +7,7 @@ import kotlin.random.Random
 class MagicBook {
 
     private val enchantments = Enchantments.values()
+
     fun summonEnchantment(): Enchantment {
         return enchantments[Random.nextInt(enchantments.size)].enchantment
     }

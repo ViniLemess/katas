@@ -12,10 +12,4 @@ class SawCleaver(
         "200 Durability",
         "100 Special Attack to Kin and Beasts"
     )
-
-    override fun stats(): String {
-        val baseStatsJoined = baseStats.joinToString("\n")
-        val attribute = enchantment?.attribute
-        return "$baseStatsJoined\n${attribute ?: ""}"
-    }
 }
