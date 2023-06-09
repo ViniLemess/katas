@@ -1,6 +1,6 @@
 package com.vinilemess.enchanting.enchantment
 
-import com.vinilemess.enchanting.capitalize
+import com.vinilemess.enchanting.capitalizeFirstChar
 
 enum class Enchantments (val enchantment: Enchantment) {
     ICE(Enchantment("Icy", "+5 ice damage")),
@@ -10,6 +10,6 @@ enum class Enchantments (val enchantment: Enchantment) {
     STRENGTH(Enchantment("Angry", "+5 strength"));
 
     fun getEnchantmentName(): String {
-        return this.name.capitalize()
+        return this.name.capitalizeFirstChar()
     }
 }
