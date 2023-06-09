@@ -3,7 +3,7 @@ package com.vinilemess.enchanting.weapon
 import com.vinilemess.enchanting.enchantment.Enchantment
 
 class SawCleaver(
-    override var weaponName: String = "SawCleaver",
+    override val originalName: String = "SawCleaver",
     override var enchantment: Enchantment?
 ) : Weapon {
 
