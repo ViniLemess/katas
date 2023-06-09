@@ -8,7 +8,10 @@ class MagicBook {
 
     private val enchantments = Enchantments.values()
 
-    fun summonEnchantment(): Enchantment {
+    fun summonEnchantment(): Enchantment? {
+        if (Random.nextDouble() < 0.1) {
+            return null
+        }
         return enchantments[Random.nextInt(enchantments.size)].enchantment
     }
 }
